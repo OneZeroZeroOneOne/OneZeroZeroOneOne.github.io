@@ -1,13 +1,8 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view class="blur"/>
   </div>
 </template>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -15,7 +10,13 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #e2e8f0;  
+  height: auto;
+  width: 100vw;
+
 }
+
+
 
 #nav {
   padding: 30px;
@@ -29,4 +30,11 @@
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+</style>
+<style lang="scss">
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
 </style>
