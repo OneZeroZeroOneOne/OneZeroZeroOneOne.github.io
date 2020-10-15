@@ -9,26 +9,21 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  background: #e2e8f0;  
+  background: #132743;  
   height: auto;
   width: 100vw;
+  background-repeat: repeat;
 
 }
 
 
-
-#nav {
-  padding: 30px;
+</style>
+<style lang="scss">
+.color-main {
+  color: #70adb5;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.color-second {
+  color: #ffcbcb;
 }
 </style>
 <style lang="scss">
