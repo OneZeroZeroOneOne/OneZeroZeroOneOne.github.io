@@ -1,7 +1,5 @@
 <template>
-    
-        <img class="skill_image" :scr="`../assets/${name}`">
-    
+    <img class="skill_image" :src="`../assets/${name}`">
 </template>
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
@@ -22,9 +20,5 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
-.skill_image {
-    
-    height: 100px;
-}
 </style>
 
