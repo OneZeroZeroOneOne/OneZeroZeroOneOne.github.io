@@ -4,15 +4,14 @@
   </div>
 </template>
 <style lang="scss">
-$colormain: #70adb5;
-$colorsecond: #ffcbcb;
+
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background: #132743;  
+  background: $colorbackground;  
   height: auto;
   width: 100vw;
   background-repeat: repeat;
@@ -22,14 +21,6 @@ $colorsecond: #ffcbcb;
 
 </style>
 <style lang="scss">
-.color-main {
-  color: #70adb5;
-}
-
-
-.color-second {
-  color: #ffcbcb;
-}
 </style>
 <style lang="scss">
 @import "tailwindcss/base";

@@ -1,29 +1,29 @@
 <template>
     <section class="skill_container font-serif">
         <section class="skill_section ">
-            <h3 class="skill_title text-left text-2xl color-second">Languages</h3>
+            <h3 class="skill_title text-left text-2xl color-third">Languages</h3>
             <section class="skill_list border-2 rounded">
-                <div class="px-1 py-1" v-for="(s, i)  in skills.languages" :key="i">
+                <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.languages" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left color-second">{{s}}</p>
+                    <p class="text-left">{{s}}</p>
                 </div>
             </section>
         </section>
         <section class="skill_section">
-            <h3 class="skill_title text-left text-2xl color-main">Frameworks</h3>
+            <h3 class="skill_title text-left text-2xl color-third">Frameworks</h3>
             <section class="skill_list border-2 rounded">
-                <div class="px-1 py-1" v-for="(s, i)  in skills.frameworks" :key="i">
+                <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.frameworks" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left color-second">{{s}}</p>
+                    <p class="text-left">{{s}}</p>
                 </div>
             </section>
         </section>
         <section class="skill_section">
-            <h3 class="skill_title text-left text-2xl color-main">Tools</h3>
+            <h3 class="skill_title text-left text-2xl color-third">Tools</h3>
             <section class="skill_list border-2 rounded">
-                <div class="px-1 py-1" v-for="(s, i)  in skills.tools" :key="i">
+                <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.tools" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left color-second">{{s}}</p>
+                    <p class="text-left">{{s}}</p>
                 </div>
             </section>
         </section>
@@ -69,8 +69,7 @@ export default class Home extends Vue {
 <style lang="scss">
 .skill_container {
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
 
 }
 
@@ -79,6 +78,12 @@ export default class Home extends Vue {
     gap: .75rem;
     grid-gap: .75rem;
     grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-    border-color: #ffcbcb;
+    border-color: $colorthird;
+}
+
+.skill_img_div:hover {
+    transition: all 0.5s ease;
+    color: $colorthird;
+    
 }
 </style>

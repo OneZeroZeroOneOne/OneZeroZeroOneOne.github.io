@@ -9,8 +9,6 @@
   },
   "dependencies": {
     "core-js": "^3.4.3",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
     "tailwindcss": "^1.8.10",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -24,6 +22,8 @@
     "@vue/cli-plugin-typescript": "^4.1.0",
     "@vue/cli-plugin-vuex": "^4.1.0",
     "@vue/cli-service": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.3",
     "typescript": "~3.5.3",
     "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.12"

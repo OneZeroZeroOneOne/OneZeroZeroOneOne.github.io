@@ -6,20 +6,21 @@
             <p id="metext" class="color-main">Привет, я Владимир Прохоренко</p> 
           </div>
           <div id="medescr" class="text-xl mt-4">
-            <p id="medescrtext" class="color-second">Я бекенд разработчик с комерческим опытом разработки чат ботов, и множеством собственных проектов</p>
+            <p id="medescrtext" class="color-main">Я бекенд разработчик с комерческим опытом разработки чат ботов, и множеством собственных проектов</p>
           </div>
-        <div class="infocategoryes mt-4">
-            <CategoryHeader :text="a1" :href="'/aboutme'" class=""/>
+        <div class="mt-4">
+            <CategoryHeader :text="a1" :href="'/aboutme'">
+            </CategoryHeader>
             <br />
-            <CategoryHeader :text="a2" :href="'/aboutme'"/>
+            <CategoryHeader :text="a2" :href="'/aboutme'">
+            </CategoryHeader>
             <br />
-            <CategoryHeader :text="a3" :href="'/aboutme'"/>
+            <CategoryHeader :text="a3" :href="'/aboutme'">
+            </CategoryHeader>
         </div>
         </div>
         <div class="w-3/6 mt-10"> 
-          <div class="d_skill_image">
-            <img src="../assets/csharp.svg" class="i_skill_image">
-          </div>
+          <SkillContainer/>
         </div>
     </div>
 </section>
@@ -28,17 +29,19 @@
 <script lang="ts">
 import CategoryHeader from '../components/CategoryHeader.vue';
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
+import SkillContainer from '../components/SkillContainer.vue';
 
 @Component({
   components: {
     CategoryHeader,
+    SkillContainer,
   },
 })
 
 export default class Home extends Vue {
-  public a1: string = 'Обо мне 👉';
-  public a2: string = 'Проекты 👉';
-  public a3: string = 'Контакты 👉';
+  public a1: string = 'Обо мне';
+  public a2: string = 'Проекты';
+  public a3: string = 'Контакты';
   constructor() {
     super();
     setTimeout(() =>{
@@ -84,7 +87,7 @@ export default class Home extends Vue {
             let span = document.createElement('span');
             prevEl2 = span;
             span.appendChild(texts);
-            span.classList.add("color-second");
+            span.classList.add("color-main");
             if (wrapper2 != null) {
                 wrapper2.appendChild(span);
             }
@@ -106,27 +109,14 @@ export default class Home extends Vue {
   max-height: 17%;
 }
 
-$transition: all 0.45s ease;
-$color: rgb(255, 123, 0);
-$colorhover: rgb(247, 222, 6);
-
-.svg {
-  fill: $color;
-  transition: all 2s ease;
-}
-
-.i_skill_image {
-    height: 70px;
-    width: 70px;
-}
-
-.svg:hover {
-		fill: $colorhover;
-	} 
 #medescr{
   height: 17%;
   max-height: 17%;
 }
+
+
+
+
 </style>
 
 

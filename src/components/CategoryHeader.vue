@@ -1,6 +1,7 @@
 <template>
     <div id="categoryheader">
-        <p id="text" class="text-4xl color-second"><a :href="href">{{text}}</a></p>
+        <p class="category-header text-4xl color-main"><a :href="href">{{text}}</a></p>
+        <slot/>
     </div>
 </template>
 <script lang="ts">
@@ -19,16 +20,27 @@ export default class CategoryHeader extends Vue {
     }
 }
 </script>
-<style>
-    #categoryheader {
-        position: relative;
-    }
+<style lang='scss'>
+#categoryheader {
+    position: relative;
+}
 
-    #categoryheader:hover {
-        animation: moving 1s infinite alternate;
-    }
-    @keyframes moving {
-        from {left: 0px;}
-        to {left: 50px;}
-    }
+#categoryheader:hover {
+    animation: moving 1s infinite alternate;
+}
+@keyframes moving {
+    from {left: 0px;}
+    to {left: 25px;}
+}
+
+.category-header:hover {
+  transition: all 0.5s ease;
+  color: $colorthird;
+}
+
+.category-header {
+  display: inline;
+}
+
+
 </style>
