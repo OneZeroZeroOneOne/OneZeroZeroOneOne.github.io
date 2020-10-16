@@ -1,7 +1,6 @@
 <template>
     <div id="categoryheader">
         <p class="category-header text-4xl color-main"><a :href="href">{{text}}</a></p>
-        <slot/>
     </div>
 </template>
 <script lang="ts">
@@ -15,9 +14,6 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 export default class CategoryHeader extends Vue {
     @Prop() public text!: string;
     @Prop() public href!: string;
-    constructor() {
-        super();
-    }
 }
 </script>
 <style lang='scss'>

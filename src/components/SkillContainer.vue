@@ -67,11 +67,7 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
-.skill_container {
-    display: grid;
-    grid-template-rows: 100%;
 
-}
 
 .skill_list {
     display: grid;
@@ -81,6 +77,13 @@ export default class Home extends Vue {
     border-color: $colorthird;
 }
 
+.skill_container { 
+  display: grid;
+  grid-template-rows: 1fr;
+
+  grid-gap: 1.5vw;
+  
+  }
 .skill_img_div:hover {
     transition: all 0.5s ease;
     color: $colorthird;

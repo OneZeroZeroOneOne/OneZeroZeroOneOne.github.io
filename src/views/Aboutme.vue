@@ -22,11 +22,5 @@ export default class Home extends Vue {
 
 
 <style lang="scss">
-.skill_container { 
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-  grid-gap: 1.5vw;
-  
-  }
+
 </style>
