@@ -18,7 +18,7 @@
         </div>
         <div class="w-3/6 mt-10"> 
           <div class="d_skill_image">
-            <img scr="https://s.cdpn.io/3/kiwi.svg" class="i_skill_image">
+            <img src="../assets/csharp.svg" class="i_skill_image">
           </div>
         </div>
     </div>
@@ -116,13 +116,8 @@ $colorhover: rgb(247, 222, 6);
 }
 
 .i_skill_image {
-  height: 70px;
-  width: 70px;
-}
-
-.d_skill_image {
-  height: 100px;
-  width: 100px;
+    height: 70px;
+    width: 70px;
 }
 
 .svg:hover {

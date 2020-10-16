@@ -3,7 +3,10 @@
     <router-view class="blur"/>
   </div>
 </template>
-<style>
+<style lang="scss">
+$colormain: #70adb5;
+$colorsecond: #ffcbcb;
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +25,8 @@
 .color-main {
   color: #70adb5;
 }
+
+
 .color-second {
   color: #ffcbcb;
 }

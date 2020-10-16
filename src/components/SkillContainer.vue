@@ -1,29 +1,29 @@
 <template>
-    <section class="skill_container">
-        <section class="skill_section">
-            <h3 class="skill_title text-left">Languages</h3>
-            <section class="skill_list">
-                <div v-for="(s, i)  in skills.frameworks" :key="i">
+    <section class="skill_container font-serif">
+        <section class="skill_section ">
+            <h3 class="skill_title text-left text-2xl color-second">Languages</h3>
+            <section class="skill_list border-2 rounded">
+                <div class="px-1 py-1" v-for="(s, i)  in skills.languages" :key="i">
                     <SkillIcon :name="s"/>
-                    <p>{{s}}</p>
+                    <p class="text-left color-second">{{s}}</p>
                 </div>
             </section>
         </section>
         <section class="skill_section">
-            <h3 class="skill_title text-left">Frameworks</h3>
-            <section class="skill_list">
-                <div v-for="(s, i)  in skills.frameworks" :key="i">
+            <h3 class="skill_title text-left text-2xl color-main">Frameworks</h3>
+            <section class="skill_list border-2 rounded">
+                <div class="px-1 py-1" v-for="(s, i)  in skills.frameworks" :key="i">
                     <SkillIcon :name="s"/>
-                    <p>{{s}}</p>
+                    <p class="text-left color-second">{{s}}</p>
                 </div>
             </section>
         </section>
         <section class="skill_section">
-            <h3 class="skill_title text-left">Tools</h3>
-            <section class="skill_list">
-                <div v-for="(s, i)  in skills.tools" :key="i">
+            <h3 class="skill_title text-left text-2xl color-main">Tools</h3>
+            <section class="skill_list border-2 rounded">
+                <div class="px-1 py-1" v-for="(s, i)  in skills.tools" :key="i">
                     <SkillIcon :name="s"/>
-                    <p>{{s}}</p>
+                    <p class="text-left color-second">{{s}}</p>
                 </div>
             </section>
         </section>
@@ -71,6 +71,7 @@ export default class Home extends Vue {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+
 }
 
 .skill_list {
@@ -78,5 +79,6 @@ export default class Home extends Vue {
     gap: .75rem;
     grid-gap: .75rem;
     grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    border-color: #ffcbcb;
 }
 </style>
