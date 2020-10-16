@@ -1,33 +1,33 @@
 <template>
-    <section class="skill_container font-serif">
-        <section class="skill_section ">
+    <div class="skill_container font-serif">
+        <div class="skill_section ">
             <h3 class="skill_title text-left text-2xl color-third">Languages</h3>
-            <section class="skill_list border-2 rounded">
+            <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.languages" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left">{{s}}</p>
+                    <p class="text-left text-center">{{s}}</p>
                 </div>
-            </section>
-        </section>
-        <section class="skill_section">
+            </div>
+        </div>
+        <div class="skill_section">
             <h3 class="skill_title text-left text-2xl color-third">Frameworks</h3>
-            <section class="skill_list border-2 rounded">
+            <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.frameworks" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left">{{s}}</p>
+                    <p class="text-left text-center">{{s}}</p>
                 </div>
-            </section>
-        </section>
-        <section class="skill_section">
+            </div>
+        </div>
+        <div class="skill_section">
             <h3 class="skill_title text-left text-2xl color-third">Tools</h3>
-            <section class="skill_list border-2 rounded">
+            <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.tools" :key="i">
                     <SkillIcon :name="s"/>
-                    <p class="text-left">{{s}}</p>
+                    <p class="text-left text-center">{{s}}</p>
                 </div>
-            </section>
-        </section>
-    </section>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script lang="ts">
@@ -71,19 +71,23 @@ export default class Home extends Vue {
 
 .skill_list {
     display: grid;
-    gap: .75rem;
-    grid-gap: .75rem;
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-    border-color: $colorthird;
+    gap: .25rem;
+    grid-gap: .25rem;
+    grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
+    //grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+
 }
 
 .skill_container { 
   display: grid;
-  grid-template-rows: 1fr;
-
-  grid-gap: 1.5vw;
-  
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  grid-gap: 0.25vw;
   }
+
+.skill_img_div {
+    width: auto;
+    height: auto;
+}
 .skill_img_div:hover {
     transition: all 0.5s ease;
     color: $colorthird;

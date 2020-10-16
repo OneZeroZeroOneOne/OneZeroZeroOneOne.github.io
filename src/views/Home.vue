@@ -1,7 +1,7 @@
 <template>
   <section class="font-serif text-left text-xl">
-    <div class="flex h-screen">
-        <div class="w-2/6 ml-40 mt-8">
+    <div class="home_div flex h-screen">
+        <div class="ml-16 mt-8">
           <div id="meheader" class="text-4xl">
             <p id="metext" class="color-main">Привет, я Владимир Прохоренко</p> 
           </div>
@@ -19,8 +19,11 @@
             </CategoryHeader>
         </div>
         </div>
-        <div class="w-3/6 mt-10"> 
+        <div class="mt-10"> 
           <SkillContainer/>
+        </div>
+        <div>
+          ASDASDASDASD
         </div>
     </div>
 </section>
@@ -105,17 +108,21 @@ export default class Home extends Vue {
 
 <style lang="scss" scoped>
 #meheader{
-  height: 17%;
-  max-height: 17%;
+
 }
 
 #medescr{
-  height: 17%;
-  max-height: 17%;
+
 }
 
 
-
+.home_div {
+  display: grid;
+  gap: .25rem;
+  grid-gap: .25rem;
+  grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
+  
+}
 
 </style>
 

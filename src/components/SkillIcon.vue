@@ -66,6 +66,7 @@ export default class Home extends Vue {
     fill: $colorthird;
 }
 .imgdiv {
+    margin: auto;
     height: 50px;
     width: 50px;
 }
