@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>Hello, i'm Volodymyr, i'm 19's guid from Kuiv. Since childhood I was interested in computer science. It all started with learning trivial language Pascal ​​in high school. As I got older, I became more immersed in computer science.</p>
+    <p>Hello! I'm Volodymyr, i'm 19's guid from Kuiv. Since childhood I was interested in computer science. It all started with learning trivial language Pascal ​​in high school. As I got older, I became more immersed in computer science.</p>
   </div>
 </template>
 
