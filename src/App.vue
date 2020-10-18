@@ -7,15 +7,9 @@
 
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  display: flex;
   background: $colorbackground;  
-  height: auto;
-  width: 100vw;
-  background-repeat: repeat;
-
+  min-height: 100vh;
 }
 
 

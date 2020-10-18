@@ -1,7 +1,7 @@
 <template>
-    <div class="skill_container font-serif">
-        <div class="skill_section ">
-            <h3 class="skill_title text-left text-2xl color-third">Languages</h3>
+    <div class="skill_container mx-auto font-serif px-16">
+        <div class="skill_section border-r-2 border-l-2 border-color-third">
+            <h3 class="skill_title text-center text-2xl color-third">Languages</h3>
             <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.languages" :key="i">
                     <SkillIcon :name="s"/>
@@ -9,8 +9,8 @@
                 </div>
             </div>
         </div>
-        <div class="skill_section">
-            <h3 class="skill_title text-left text-2xl color-third">Frameworks</h3>
+        <div class="skill_section border-r-2 border-l-2 border-color-third">
+            <h3 class="skill_title text-center text-2xl color-third">Frameworks</h3>
             <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.frameworks" :key="i">
                     <SkillIcon :name="s"/>
@@ -18,8 +18,8 @@
                 </div>
             </div>
         </div>
-        <div class="skill_section">
-            <h3 class="skill_title text-left text-2xl color-third">Tools</h3>
+        <div class="skill_section border-r-2 border-l-2 border-color-third">
+            <h3 class="skill_title text-center text-2xl color-third">Tools</h3>
             <div class="skill_list">
                 <div class="skill_img_div color-main px-1 py-1" v-for="(s, i)  in skills.tools" :key="i">
                     <SkillIcon :name="s"/>
@@ -73,15 +73,16 @@ export default class Home extends Vue {
     display: grid;
     gap: .25rem;
     grid-gap: .25rem;
-    grid-template-columns: repeat(auto-fill,minmax(90px,1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     //grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
 
 }
 
 .skill_container { 
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
-  grid-gap: 0.25vw;
+  gap: 1.75rem;
+  grid-gap: 1.75rem;
+  grid-template-columns: 1fr 1fr 1fr;
   }
 
 .skill_img_div {
@@ -91,6 +92,10 @@ export default class Home extends Vue {
 .skill_img_div:hover {
     transition: all 0.5s ease;
     color: $colorthird;
+    .svg {
+        transition: all 0.5s ease;
+        fill: $colorthird;
+    }
     
 }
 </style>

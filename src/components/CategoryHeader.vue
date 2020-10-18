@@ -1,6 +1,6 @@
 <template>
     <div id="categoryheader">
-        <p class="category-header text-4xl color-main"><a :href="href">{{text}}</a></p>
+        <p class="category-header text-4xl color-main"><router-link :to="href">{{text}}</router-link></p>
     </div>
 </template>
 <script lang="ts">

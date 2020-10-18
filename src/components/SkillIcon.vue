@@ -61,10 +61,10 @@ export default class Home extends Vue {
     fill: $colorsecond;
 }
 
-.svg:hover {
+/*.svg:hover {
     transition: all 0.5s ease;
     fill: $colorthird;
-}
+}*/
 .imgdiv {
     margin: auto;
     height: 50px;
