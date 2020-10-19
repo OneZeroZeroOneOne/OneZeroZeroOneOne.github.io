@@ -55,7 +55,7 @@ export default class Home extends Vue {
   display: grid;
   gap: 0.75rem;
   grid-gap: 0.75rem;
-  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
   place-items: center;

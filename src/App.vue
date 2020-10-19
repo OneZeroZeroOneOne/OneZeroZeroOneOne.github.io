@@ -7,6 +7,7 @@
 #app {
   display: flex;
   background: $colorbackground;
+  min-height: 100vh;
 }
 </style>
 

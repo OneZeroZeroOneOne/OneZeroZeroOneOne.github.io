@@ -1,29 +1,29 @@
 <template>
   <section class="home">
-    <div class="home-about">
-      <div class="item">
-        <div class="text-4xl">
-          <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
-        </div>
-        <div id="medescr" class="text-xl mt-4">
-          <p id="medescrtext" class="color-main">
-            I'm a backend developer with experience in creating web-api and a
-            lot of my own projects
-          </p>
-        </div>
-        <div class="flex flex-wrap mt-8">
-          <div class="mt-4">
-            <CategoryHeader
-              v-for="i in links"
-              :text="i.title"
-              :href="i.route"
-              :key="i.title"
-            />
+    <div class="home-about mt-8">
+      <div class="flex flex-wrap">
+        <div class="font-serif">
+          <div class="text-4xl">
+            <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
+          </div>
+          <div id="medescr" class="text-xl mt-4">
+            <p id="medescrtext" class="color-main">
+              I'm a backend developer with experience in creating web-api and a
+              lot of my own projects
+            </p>
+          </div>
+          <div class="mt-8">
+              <CategoryHeader class="mt-8"
+                v-for="i in links"
+                :text="i.title"
+                :href="i.route"
+                :key="i.title"
+              />
           </div>
         </div>
-      </div>
-      <div class="item">
-        <img src="../assets/me.jpg" />
+        <div class="item">
+          <img class="rounded-3xl border-2 border-color-third" src="../assets/me.jpg" />
+        </div>
       </div>
     </div>
     <SkillContainer class="skill-container"/>
@@ -73,7 +73,6 @@ export default class Home extends Vue {
     .item {
       padding: 5rem;
     }
-
     img {
       height: auto;
       max-width: 100%;
@@ -81,6 +80,7 @@ export default class Home extends Vue {
     }
   }
 }
+
 
 .skill-container {
   margin: 4rem;
