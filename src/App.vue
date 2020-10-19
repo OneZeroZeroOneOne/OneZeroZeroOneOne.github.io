@@ -1,21 +1,15 @@
 <template>
   <div id="app">
-    <router-view class="blur"/>
+    <router-view/>
   </div>
 </template>
 <style lang="scss">
-
-
 #app {
   display: flex;
-  background: $colorbackground;  
-  min-height: 100vh;
+  background: $colorbackground;
 }
-
-
 </style>
-<style lang="scss">
-</style>
+
 <style lang="scss">
 @import "tailwindcss/base";
 

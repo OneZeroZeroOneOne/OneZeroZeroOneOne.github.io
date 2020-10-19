@@ -1,42 +1,40 @@
 <template>
-  <section class="w-screen font-serif text-left text-xl">
-    <div class="flex flex-wrap ml-32 mt-8">
-      <div class="main-text">
-        <div id="meheader" class="text-4xl">
-          <p id="metext" class="color-main">Hello, i'm Volodymyr</p> 
+  <section class="home">
+    <div class="home-about">
+      <div class="item">
+        <div class="text-4xl">
+          <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
         </div>
         <div id="medescr" class="text-xl mt-4">
-          <p id="medescrtext" class="color-main">I'm a backend developer with experience in creating web-api and a lot of my own projects</p>
+          <p id="medescrtext" class="color-main">
+            I'm a backend developer with experience in creating web-api and a
+            lot of my own projects
+          </p>
         </div>
         <div class="flex flex-wrap mt-8">
           <div class="mt-4">
-            <CategoryHeader :text="a1" :href="'/aboutme'"/>
-            <br />
-            <CategoryHeader :text="a2" :href="'/aboutme'"/>
-            <br />
-            <CategoryHeader :text="a3" :href="'/aboutme'"/>
+            <CategoryHeader
+              v-for="i in links"
+              :text="i.title"
+              :href="i.route"
+              :key="i.title"
+            />
           </div>
         </div>
       </div>
-      <div class="flex ml-16">
-        <div>
-          <img class="rounded-lg border-2 border-color-third" src="../assets/me.jpg">
-        </div>
-        <div class="ml-4">
-            <img class="rounded-lg border-2 border-color-third" src="../assets/me.jpg">
-        </div>
+      <div class="item">
+        <img src="../assets/me.jpg" />
       </div>
     </div>
-    <div class="mt-8"> 
-      <SkillContainer/>
-    </div>
+    <SkillContainer class="skill-container"/>
   </section>
 </template>
 
 <script lang="ts">
-import CategoryHeader from '../components/CategoryHeader.vue';
-import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
-import SkillContainer from '../components/SkillContainer.vue';
+import CategoryHeader from "../components/CategoryHeader.vue";
+import { Component, Prop, Vue, Watch } from "vue-property-decorator";
+import SkillContainer from "../components/SkillContainer.vue";
+import IStepLink from "../models/IStepLink";
 
 @Component({
   components: {
@@ -44,22 +42,47 @@ import SkillContainer from '../components/SkillContainer.vue';
     SkillContainer,
   },
 })
-
 export default class Home extends Vue {
-  public a1: string = 'About me';
-  public a2: string = 'Projects';
-  public a3: string = 'Git';
-  constructor() {
-    super();
-    }
+  public links: IStepLink[] = [
+    {
+      title: "About Me",
+      route: "about",
+    },
+    {
+      title: "Projects",
+      route: "projects",
+    },
+    {
+      title: "GitHub",
+      route: "https://github.com/Forevka",
+    },
+  ];
 }
 </script>
 
 <style lang="scss" scoped>
-.main-text {
-  min-width: 35%;
-  max-width: 35%;
+.home {
+  width: 100vw;
+
+  &-about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    .item {
+      padding: 5rem;
+    }
+
+    img {
+      height: auto;
+      max-width: 100%;
+      width: 20rem;
+    }
+  }
+}
+
+.skill-container {
+  margin: 4rem;
 }
 </style>
-
-
