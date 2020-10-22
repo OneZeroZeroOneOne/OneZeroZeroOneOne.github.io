@@ -27,4 +27,4 @@ export default class CategoryHeader extends Vue {
 
 <style lang="scss" scoped>
 
-</style>>
+</style>

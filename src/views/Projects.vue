@@ -4,16 +4,19 @@
         <div class="project-container">
             <Project v-for="(s, i) in projectinfo" :key="i" :name="s.name" :url="s.url" :usedskills="s.usedskills" :description="s.description"/>
         </div>
+        <BackToMain/>
     </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import Project from "../components/Project.vue";
+import BackToMain from "../components/BackToMain.vue"
 
 @Component({
   components: {
     Project,
+    BackToMain,
   },
 })
 

@@ -1,8 +1,8 @@
 <template>
   <section class="home">
-    <div class="home-about mt-8">
-      <div class="flex flex-wrap">
-        <div class="item font-serif px-8">
+    <div class="main-container">
+      <div class="home-about">
+        <div class="item font-serif">
           <div class="text-4xl">
             <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
           </div>
@@ -25,8 +25,10 @@
           <img class="rounded-3xl border-8 border-color-second" src="../assets/me.jpg" />
         </div>
       </div>
+      <div>
+        <SkillContainer class="skill-container"/>
+      </div>
     </div>
-    <SkillContainer class="skill-container"/>
   </section>
 </template>
 
@@ -61,6 +63,9 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss" scoped>
+.main-container {
+  margin: 0 calc(5vw + 2.5%);
+}
 .home {
   width: 100vw;
 

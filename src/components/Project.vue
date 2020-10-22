@@ -28,9 +28,6 @@ export default class Home extends Vue {
     @Prop() public name!:string;
     @Prop() public usedskills!:[];
     @Prop() public description!:string;
-    constructor() {
-        super();
-    }
 }
 </script>
 

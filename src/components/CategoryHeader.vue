@@ -12,12 +12,12 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
   components: {
   },
 })
-
 export default class CategoryHeader extends Vue {
     @Prop() public text!: string;
     @Prop() public href!: string;
     
 }
+
 </script>
 <style lang='scss'>
 #categoryheader {
