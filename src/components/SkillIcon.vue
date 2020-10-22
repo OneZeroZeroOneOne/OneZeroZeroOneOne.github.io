@@ -17,6 +17,7 @@ import NodeIcon from "./icon/NodeIcon.vue";
 import NpmIcon from "./icon/NpmIcon.vue";
 import PostgresIcon from "./icon/PostgresIcon.vue";
 import CsharpIcon from "./icon/CsharpIcon.vue";
+import SvelteIcon from "./icon/SvelteIcon.vue"
 
 @Component({
   components: {
@@ -37,6 +38,7 @@ export default class Home extends Vue {
     git: GitIcon,
     npm: NpmIcon,
     node: NodeIcon,
+    svelte: SvelteIcon,
   };
 
   @Prop() name!: string;
@@ -51,7 +53,7 @@ export default class Home extends Vue {
 <style lang="scss">
 .svg {
   margin: auto;
-  fill: $colorsecond;
+  fill: $colorthird;
   &.normal {
   height: 50px;
   width: 50px;
@@ -61,8 +63,9 @@ export default class Home extends Vue {
     height: 35px;
     width: 35px;
   }
+  &:hover {
+    transition: all 0.15s ease;
+    fill: $colormain;
+  }
 }
-
-
-
 </style>

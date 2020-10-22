@@ -1,7 +1,7 @@
 <template>
   <div class="skill_container mx-auto font-serif">
     <div v-for="(l, k) in skills" :key="k" class="skill_section">
-      <h3 class="skill_title text-center text-2xl color-third">{{capitalizeFirstLetter(k)}}</h3>
+      <h3 class="skill_title text-center text-2xl color-main">{{capitalizeFirstLetter(k)}}</h3>
       <div class="skill_list">
         <div
           class="skill_img_div color-main"
@@ -35,7 +35,7 @@ export default class Home extends Vue {
       "mysql",
       "postgres",
     ],
-    frameworks: ["tailwind", "dotnet", "vue"],
+    frameworks: ["tailwind", "dotnet", "vue", "svelte"],
     tools: ["git", "npm", "node"],
   };
   
@@ -69,8 +69,4 @@ export default class Home extends Vue {
 
 }
 
-.svg:hover {
-    transition: all 0.15s ease;
-    fill: $colorthird;
-  }
 </style>

@@ -1,7 +1,7 @@
-$colormain: #006a71;
-$colorsecond: #68b0ab;
-$colorthird: #ff7e67;
-$colorbackground: #ecf4f3;
+$colormain: #ff6363;
+$colorsecond: #543864;
+$colorthird: #ffbd69;
+$colorbackground: #202040;
 
 .color-main {
     color: $colormain;
@@ -15,6 +15,10 @@ $colorbackground: #ecf4f3;
 .color-third {
     color: $colorthird;
   }
+
+.fill-colorbackground {
+  fill: $colorbackground;
+}
 
 
 .border-color-third {

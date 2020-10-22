@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="rounded-3xl border-2 border-color-third" src="../assets/me.jpg" />
+          <img class="rounded-3xl border-8 border-color-second" src="../assets/me.jpg" />
         </div>
       </div>
     </div>

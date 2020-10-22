@@ -1,7 +1,7 @@
 <template>
     <div class="font-serif justify-center border-2 border-color-third rounded-xl">
         <p class="text-center color-main text-xl">{{this.name}}</p>
-        <p class="project-description text-xl text-center p-4">{{this.description}}</p>
+        <p class="project-description text-xl text-center p-4 color-third">{{this.description}}</p>
         <div class="skills-and-github p-2">
             <div class="usedskills" >
                 <SkillIcon v-for="(s,i) in usedskills" :key="i" :name="s" size="little"/>
