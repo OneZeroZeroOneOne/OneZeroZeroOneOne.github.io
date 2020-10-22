@@ -1,7 +1,7 @@
 <template>
     <div class="project-section p-8">
         <p class="font-serif color-main text-3xl">Projects</p>
-        <div class="project-container">
+        <div class="project-list">
             <Project v-for="(s, i) in projectinfo" :key="i" :name="s.name" :url="s.url" :usedskills="s.usedskills" :description="s.description"/>
         </div>
         <BackToMain/>
@@ -55,7 +55,7 @@ export default class Home extends Vue {
         proj7: {
             url: "https://github.com/OneZeroZeroOneOne/QuestionWiktorina",
             name: "QuestionWiktorina",
-            description: "Игра викторина с вопросами, отгадываниями и очками в \"Telegram\"",
+            description: "Quiz game with questions, guesses and points in \"Telegram\"",
             usedskills: [
                 "python",
                 "postgres",
@@ -94,10 +94,10 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
-.project-container {
+.project-list {
     display: grid;
-    gap: 0.5rem;
-    grid-gap: 0.5rem;
+    gap: 1rem;
+    grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 .project-section {

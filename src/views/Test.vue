@@ -1,5 +1,12 @@
 <template>
-    <SkillIcon name='python'/>
+    <div class="a">
+        <div class="b flex color-main">
+            <p>babb</p>
+        </div>
+        <div class="c color-main">
+            ccc
+        </div>
+    </div>
 </template>
 
 
@@ -15,24 +22,15 @@ import SkillIcon from '../components/SkillIcon.vue';
 
 
 export default class Home extends Vue {
-    constructor() {
-        super();
-    }
 }
 </script>
 
 <style lang="scss">
-.grid {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-gap: 2vw;
+.a {
+    width: 40vw;
 }
-
-
-.grid > div {
-  font-size: 5vw;
-  padding: .5em;
-  background: gold;
-  text-align: center;
+.b {
+    height: 40vh;
+    align-items: center;
 }
 </style>

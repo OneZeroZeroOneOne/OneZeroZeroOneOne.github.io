@@ -1,7 +1,9 @@
 <template>
-    <div class="font-serif justify-center border-2 border-color-third rounded-xl">
+    <div class="project-container font-serif border-2 border-color-third rounded-xl">
         <p class="text-center color-main text-xl">{{this.name}}</p>
-        <p class="project-description text-xl text-center p-4 color-third">{{this.description}}</p>
+        <div class="project-description">
+            <p class="text-xl text-center p-4 color-third">{{this.description}}</p>
+        </div>
         <div class="skills-and-github p-2">
             <div class="usedskills" >
                 <SkillIcon v-for="(s,i) in usedskills" :key="i" :name="s" size="little"/>
@@ -58,6 +60,15 @@ export default class Home extends Vue {
 }
 
 .project-description {
-    min-height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+}
+
 </style>
