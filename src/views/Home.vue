@@ -2,7 +2,7 @@
   <section class="home">
     <div class="home-about mt-8">
       <div class="flex flex-wrap">
-        <div class="font-serif">
+        <div class="item font-serif px-8">
           <div class="text-4xl">
             <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
           </div>
@@ -54,7 +54,7 @@ export default class Home extends Vue {
     },
     {
       title: "GitHub",
-      route: "https://github.com/Forevka",
+      route: "https://github.com/OneZeroZeroOneOne",
     },
   ];
 }
@@ -70,9 +70,6 @@ export default class Home extends Vue {
     align-items: center;
     justify-content: space-around;
 
-    .item {
-      padding: 5rem;
-    }
     img {
       height: auto;
       max-width: 100%;

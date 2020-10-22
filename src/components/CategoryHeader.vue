@@ -1,6 +1,8 @@
 <template>
     <div id="categoryheader">
-        <p class="category-header text-4xl color-main"><router-link :to="href">{{text}}</router-link></p>
+        <p class="category-header text-4xl color-main">
+          <router-link :to="href" v-if="!href.startsWith('http')">{{text}}</router-link>
+          <a :href="href" v-else target="_blank" rel="noopener">{{text}}</a></p>
     </div>
 </template>
 <script lang="ts">
@@ -14,6 +16,7 @@ import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 export default class CategoryHeader extends Vue {
     @Prop() public text!: string;
     @Prop() public href!: string;
+    
 }
 </script>
 <style lang='scss'>

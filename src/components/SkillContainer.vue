@@ -8,7 +8,7 @@
           v-for="(s, i) in l"
           :key="i"
         >
-          <SkillIcon :name="s" />
+          <SkillIcon :name="s" size="normal" />
         </div>
       </div>
     </div>
@@ -67,11 +67,10 @@ export default class Home extends Vue {
   margin-top: 1rem;
   margin-bottom: 1rem;
 
-  :hover {
-    .svg {
-      transition: all 0.5s ease;
-      fill: $colorthird;
-    }
-  }
 }
+
+.svg:hover {
+    transition: all 0.15s ease;
+    fill: $colorthird;
+  }
 </style>

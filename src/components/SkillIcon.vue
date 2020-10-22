@@ -1,5 +1,5 @@
 <template>
-    <component :is="svg[name]" class="svg"/>
+    <component :is="svg[name]" :class="`svg ${size}`"/>
 </template>
 
 <script lang="ts">
@@ -20,7 +20,6 @@ import CsharpIcon from "./icon/CsharpIcon.vue";
 
 @Component({
   components: {
-    PythonIcon,
   },
 })
 export default class Home extends Vue {
@@ -41,6 +40,7 @@ export default class Home extends Vue {
   };
 
   @Prop() name!: string;
+  @Prop() size!: string;
   constructor() {
     super();
     console.log(this.svg[name]);
@@ -51,8 +51,18 @@ export default class Home extends Vue {
 <style lang="scss">
 .svg {
   margin: auto;
+  fill: $colorsecond;
+  &.normal {
   height: 50px;
   width: 50px;
-  fill: $colorsecond;
+  }
+
+  &.little {
+    height: 35px;
+    width: 35px;
+  }
 }
+
+
+
 </style>
