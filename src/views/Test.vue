@@ -1,7 +1,12 @@
 <template>
     <div class="a">
         <div class="b flex color-main">
-            <p>babb</p>
+            <div class="c1 color-main">
+                ccc
+            </div>
+            <div class="c2 color-main">
+                vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+            </div>
         </div>
         <div class="c color-main">
             ccc
@@ -31,6 +36,9 @@ export default class Home extends Vue {
 }
 .b {
     height: 40vh;
-    align-items: center;
+}
+
+.c1 {
+    flex-grow: 1;
 }
 </style>

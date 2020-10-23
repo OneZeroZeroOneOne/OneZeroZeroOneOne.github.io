@@ -2,14 +2,16 @@
   <section class="home">
     <div class="main-container">
       <div class="home-about">
-        <div class="item font-serif">
+        <div class="font-serif">
           <div class="text-4xl">
             <p id="metext" class="color-main">Hello, i'm Volodymyr</p>
           </div>
           <div id="medescr" class="text-xl mt-4">
             <p id="medescrtext" class="color-main">
-              I'm a backend developer with experience in creating web-api and a
-              lot of my own projects
+              I'm a backend developer with experience in
+            </p>
+            <p id="medescrtext" class="color-main">
+              creating web-api and a lot of my own projects
             </p>
           </div>
           <div class="mt-8">
@@ -33,6 +35,7 @@
 </template>
 
 <script lang="ts">
+//creating web-api and a lot of my own projects
 import CategoryHeader from "../components/CategoryHeader.vue";
 import { Component, Prop, Vue, Watch } from "vue-property-decorator";
 import SkillContainer from "../components/SkillContainer.vue";
@@ -65,6 +68,8 @@ export default class Home extends Vue {
 <style lang="scss" scoped>
 .main-container {
   margin: 0 calc(5vw + 2.5%);
+  display: flex;
+  flex-direction: column;
 }
 .home {
   width: 100vw;
@@ -75,12 +80,13 @@ export default class Home extends Vue {
     align-items: center;
     justify-content: space-around;
 
-    img {
-      height: auto;
-      max-width: 100%;
-      width: 20rem;
-    }
   }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

@@ -1,14 +1,34 @@
 <template>
   <div id="app">
+    <div class="header text-2xl color-main">
+        <a class="header-link" href="https://github.com/OneZeroZeroOneOne">GitHub</a>
+        <a class="header-link" href="https://github.com/OneZeroZeroOneOne">Resume</a>
+    </div>
     <router-view/>
   </div>
 </template>
+
 <style lang="scss">
 #app {
   display: flex;
-  background: $colorbackground;
+  flex-direction: column;
+  background: linear-gradient(45deg,$colorbackground,$colorsecond);
   min-height: 100vh;
 }
+
+.header {
+    display: flex;
+    min-height: 10vh;
+    background: linear-gradient(45deg,$colorsecond, $colorbackground);
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 4px ridge $colormain;
+    .header-link:hover {
+      transition: all 0.5s ease;
+      color: $colorthird;
+    }
+}
+
 </style>
 
 <style lang="scss">
