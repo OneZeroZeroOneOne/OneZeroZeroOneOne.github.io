@@ -1,7 +1,7 @@
 <template>
     <div class="header text-2xl">
         <a href="https://github.com/OneZeroZeroOneOne">GitHub</a>
-        <a href="https://github.com/OneZeroZeroOneOne">Resume</a>
+        <a :href="downloadById(`../files/resume.pdf`)" download>esume</a>
     </div>
 </template>
 

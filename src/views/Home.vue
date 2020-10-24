@@ -57,10 +57,7 @@ export default class Home extends Vue {
       title: "Projects",
       route: "projects",
     },
-    {
-      title: "GitHub",
-      route: "https://github.com/OneZeroZeroOneOne",
-    },
+
   ];
 }
 </script>
@@ -75,6 +72,7 @@ export default class Home extends Vue {
   width: 100vw;
 
   &-about {
+    margin-top: 2%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -87,6 +85,9 @@ export default class Home extends Vue {
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    width: 80%;
+  }
 }
 
 

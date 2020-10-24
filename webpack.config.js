@@ -9,6 +9,13 @@ module.exports = {
             'vue-svg-loader',
           ],
         },
+        {
+          test: /\.(csv|xlsx|xls)$/,
+          loader: 'file-loader',
+          options: {
+              name: `files/[name].[ext]`
+          }
+        }
       ],
     },
   };
