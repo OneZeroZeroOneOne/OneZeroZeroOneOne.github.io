@@ -2,7 +2,7 @@
   <div id="app">
     <div class="header text-2xl color-main">
         <a class="header-link" href="https://github.com/OneZeroZeroOneOne">GitHub</a>
-        <a class="header-link" href="./assets/me.jpg" download>Resume</a>
+        <a class="header-link" href="https://drive.google.com/file/d/136M_EA2OSTFBtgOMUQlZflt1yXde1EyX/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
     </div>
     <router-view/>
   </div>
